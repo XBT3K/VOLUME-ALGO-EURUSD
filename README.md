@@ -1,36 +1,31 @@
-# Volume OBV CMF Trading Algorithm
+# Forex Trading Algorithm
 
-This is a trading algorithm that uses a combination of volume, On Balance Volume (OBV), and Chaikin Money Flow (CMF) indicators to generate trading signals for the EUR/USD forex pair.
+This algorithm uses a combination of volume, OBV, and CMF indicators to execute trades in the EUR/USD market. It is designed to run on Python 3.8 and requires the following libraries: `pandas`, `numpy`, `backtrader`, `ta`, and `pyyaml`.
 
-## Overview
-
-The algorithm is implemented in Python and uses the following libraries:
-
-- `backtrader` for backtesting and trading simulation
-- `pandas` for data manipulation and analysis
-- `requests` for retrieving forex data from an API
-- `PyYAML` for parsing the configuration file
-
-The algorithm consists of the following files:
-
-- `config.yml`: Configuration file for the algorithm
-- `main.py`: Main script for running the algorithm
-- `backtest.py`: Module for backtesting the algorithm
-
-## Usage
-
-To use the algorithm, follow these steps:
+## Getting Started
 
 1. Install the required libraries by running `pip install -r requirements.txt` in your terminal.
-2. Modify the `config.yml` file to match your desired settings for the algorithm.
-3. Run the algorithm by running `python main.py` in your terminal.
 
-The algorithm will generate trading signals based on the configuration settings and print the results to the console.
+2. Create a `config.yml` file with your desired parameters, including your trading strategy, time frame, and risk management.
+
+3. Run `main.py` to start trading live, or run `backtest.py` to backtest your strategy on historical data.
+
+## Configuration
+
+The `config.yml` file contains the following parameters:
+
+- `strategy`: The trading strategy to use. Options include `MA_cross`, `RSI`, and `MACD`.
+- `timeframe`: The time frame to trade on. Options include `1m`, `5m`, `15m`, `1h`, and `1d`.
+- `risk_management`: The risk management parameters. Options include `fixed` or `dynamic`, and include the `stop_loss` and `take_profit` parameters.
+
+## Backtesting
+
+To backtest your trading strategy, run `backtest.py` in your terminal. The results will be saved to a `backtest_results.csv` file.
+
+## Live Trading
+
+To start trading live, run `main.py` in your terminal. Make sure to adjust the `config.yml` parameters to suit your needs, and monitor the trading activity closely.
 
 ## Disclaimer
 
-This algorithm is for educational and informational purposes only and should not be construed as investment advice. Use the algorithm at your own risk and always do your own research and due diligence before making any investment decisions.
-
-## License
-
-This code is licensed under the MIT License. 
+Trading forex carries a high level of risk and may not be suitable for all investors. The algorithm provided is for educational purposes only and should not be considered financial advice. Always do your own research before making any investment decisions.
