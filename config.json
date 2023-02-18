@@ -1,0 +1,24 @@
+{
+  "data": {
+    "name": "EURUSD",
+    "timeframe": "1D"
+  },
+  "strategy": {
+    "sma_period_fast": 10,
+    "sma_period_slow": 20,
+    "obv_period": 10,
+    "cmf_period": 20,
+    "buy_signal_threshold": 0.5,
+    "sell_signal_threshold": -0.5
+  },
+  "broker": {
+    "cash": 10000.00,
+    "commission": 0.001
+  },
+  "backtest": {
+    "fromdate": "2010-01-01",
+    "todate": "2022-02-18",
+    "plot": true,
+    "plot_savefig_path": "./backtest_results.png"
+  }
+}
