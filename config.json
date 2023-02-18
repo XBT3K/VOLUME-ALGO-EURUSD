@@ -1,0 +1,7 @@
+{
+    "access_token": "YOUR_OANDA_API_ACCESS_TOKEN",
+    "accountID": "YOUR_OANDA_ACCOUNT_ID",
+    "pair": "EUR_USD",
+    "pos_size": 10000,
+    "take_profit": 0.002,
+    "stop_loss": 0.001
