@@ -15,7 +15,6 @@ The algorithm consists of the following files:
 
 - `config.yml`: Configuration file for the algorithm
 - `main.py`: Main script for running the algorithm
-- `VolumeOBVCMF.py`: Module containing the trading strategy
 - `backtest.py`: Module for backtesting the algorithm
 
 ## Usage
