@@ -1,24 +1,26 @@
 {
-  "data": {
-    "name": "EURUSD",
-    "timeframe": "1D"
+  "strategy_params": {
+    "period": 20,
+    "cmf_level": 0.0,
+    "obv_level": 0.0
   },
-  "strategy": {
-    "sma_period_fast": 10,
-    "sma_period_slow": 20,
-    "obv_period": 10,
-    "cmf_period": 20,
-    "buy_signal_threshold": 0.5,
-    "sell_signal_threshold": -0.5
-  },
-  "broker": {
-    "cash": 10000.00,
+  "broker_params": {
+    "cash": 100000.0,
     "commission": 0.001
   },
-  "backtest": {
-    "fromdate": "2010-01-01",
-    "todate": "2022-02-18",
-    "plot": true,
-    "plot_savefig_path": "./backtest_results.png"
+  "data_feed_params": {
+    "dataname": "https://raw.githubusercontent.com/Alphapulse/forex/master/data/EURUSD.csv",
+    "nullvalue": 0.0,
+    "dtformat": "%Y-%m-%d %H:%M:%S",
+    "datetime": 0,
+    "time": -1,
+    "high": 2,
+    "low": 3,
+    "open": 1,
+    "close": 4,
+    "volume": 5,
+    "openinterest": -1,
+    "timeframe": "Minutes",
+    "compression": 15
   }
 }
