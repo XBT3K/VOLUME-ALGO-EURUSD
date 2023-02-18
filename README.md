@@ -1,33 +1,37 @@
-# OBV and CMF Trading Algorithm for EUR/USD
+# Volume OBV CMF Trading Algorithm
 
-This is a simple trading algorithm that uses the On-Balance Volume (OBV) and Chaikin Money Flow (CMF) indicators to execute trades on the EUR/USD currency pair using the Oanda API.
+This is a trading algorithm that uses a combination of volume, On Balance Volume (OBV), and Chaikin Money Flow (CMF) indicators to generate trading signals for the EUR/USD forex pair.
 
-## Requirements
+## Overview
 
-- Python 3
-- `oandapyV20` library for accessing the Oanda API
-- `pandas` library for data manipulation
+The algorithm is implemented in Python and uses the following libraries:
 
-## Installation
+- `backtrader` for backtesting and trading simulation
+- `pandas` for data manipulation and analysis
+- `requests` for retrieving forex data from an API
+- `PyYAML` for parsing the configuration file
 
-You can install the required libraries using `pip`:
+The algorithm consists of the following files:
 
-pip install oandapyV20 pandas
-
-## Configuration
-
-To use the algorithm, you need an Oanda account and API access token. You should set the `access_token` and `accountID` variables in the code to your own values.
-
-You can also customize the trading parameters, such as the currency pair, position size, take profit, and stop loss levels.
+- `config.yml`: Configuration file for the algorithm
+- `main.py`: Main script for running the algorithm
+- `VolumeOBVCMF.py`: Module containing the trading strategy
+- `backtest.py`: Module for backtesting the algorithm
 
 ## Usage
 
-You can run the algorithm by executing the `eurusd_obv_cmf.py` file in a Python environment, such as:
+To use the algorithm, follow these steps:
 
-python eurusd_obv_cmf.py
+1. Install the required libraries by running `pip install -r requirements.txt` in your terminal.
+2. Modify the `config.yml` file to match your desired settings for the algorithm.
+3. Run the algorithm by running `python main.py` in your terminal.
 
-The algorithm will fetch the latest 100 15-minute candlesticks of EUR/USD data from Oanda, calculate the OBV and CMF values, and execute a buy, sell, or hold order based on the OBV and CMF signals.
+The algorithm will generate trading signals based on the configuration settings and print the results to the console.
 
 ## Disclaimer
 
-This algorithm is for educational purposes only and should not be used for real trading without proper testing and risk management. The author and publisher are not responsible for any losses incurred using this code or any trading algorithm based on it.
+This algorithm is for educational and informational purposes only and should not be construed as investment advice. Use the algorithm at your own risk and always do your own research and due diligence before making any investment decisions.
+
+## License
+
+This code is licensed under the MIT License. 
